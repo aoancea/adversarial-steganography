@@ -5,7 +5,11 @@ from multiprocessing import Pool
 from subprocess import getoutput
 import numpy as np
 
-sys.path.append('../../')
+import os
+
+dir_path = os.path.dirname(os.path.realpath(__file__ + "\\..\\.."))
+
+sys.path.append(dir_path)
 
 from advstego.steganography import LSBMatching
 from advstego.nn import transform, imread
